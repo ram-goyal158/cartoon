@@ -1,0 +1,63 @@
+.sky {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to bottom, #87CEFA, #FFD700);
+    position: relative;
+  }
+  
+  .building {
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 150px;
+    background: gray;
+    margin: 0 10px;
+    box-shadow: 5px 5px 0px #333;
+  }
+  
+  .building.tall {
+    height: 200px;
+  }
+  
+  .building.short {
+    height: 100px;
+  }
+  .heart {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transform: rotate(-45deg);
+    animation: pulse 1s infinite;
+  
+    border-radius: 50% 50% 0 0;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    top: 0;
+  }
+  
+  .heart::before {
+    left: 50px;
+  }
+  
+  .heart::after {
+    left: -50px;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(1.2) rotate(-45deg);
+    }
+  }
+    
